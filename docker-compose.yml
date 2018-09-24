@@ -10,3 +10,6 @@ services:
       - ${KERNEL_SRC}:/src/linux:ro
       - ${BUILD_OUTPUT}:/build_output
       - ${OLD_CONFIG}:/old_config:ro
+      - /etc/passwd:/etc/passwd:ro
+    # this is the 1st user in Debian/Ubuntu
+    user: "1000:1000"
