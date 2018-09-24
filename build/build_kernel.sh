@@ -72,6 +72,7 @@ function setup_env()
 	# back up one dir level
 	OUTPUT_DIR=`dirname $BUILD_OUTPUT`/$KERNEL_VERSION
 	mkdir -p $OUTPUT_DIR
+	gcc --version
 }
 
 function build_kernel()
