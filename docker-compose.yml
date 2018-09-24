@@ -1,0 +1,12 @@
+---
+version: '3'
+services:
+  kernel_builder:
+    build: ./build
+    image: neofob/kernel_builder:latest
+    container_name: kernel_builder
+    hostname: kernel_builder
+    volumes:
+      - ${KERNEL_SRC}:/src/linux:ro
+      - ${BUILD_OUTPUT}:/build_output
+      - ${OLD_CONFIG}:/old_config:ro
