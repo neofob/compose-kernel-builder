@@ -2,7 +2,7 @@ FROM gcc:latest
 LABEL maintainer "tuan t. pham <tuan@vt.edu>"
 
 ENV	PKGS="libncurses5-dev make git exuberant-ctags bc libssl-dev bison flex \
-	debianutils libelf-dev" \
+	debianutils libelf-dev fakeroot lsb-release kmod cpio build-essential" \
 	DEBIAN_FRONTEND=noninteractive
 
 # gcc base image is Debian

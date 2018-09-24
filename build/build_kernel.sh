@@ -69,7 +69,8 @@ function setup_env()
 	echo "Creating the new config file based on $OLD_CONFIG"
 	make -s olddefconfig
 	KERNEL_VERSION=$(make -s kernelversion)
-	OUTPUT_DIR=$ARTIFACT/$KERNEL_VERSION
+	# back up one dir level
+	OUTPUT_DIR=`dirname $BUILD_OUTPUT`/$KERNEL_VERSION
 	mkdir -p $OUTPUT_DIR
 }
 
