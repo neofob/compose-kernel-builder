@@ -12,6 +12,4 @@ RUN	apt-get update && apt-get -yq dist-upgrade && \
 	apt-get autoclean -yq && \
 	rm -fr /tmp/* /var/lib/apt/lists/*
 
-COPY	./build_kernel.sh /
-
-ENTRYPOINT ["/build_kernel.sh"]
+ENTRYPOINT ["/bin/bash"]

@@ -11,5 +11,8 @@ services:
       - ${BUILD_OUTPUT}:/build_output
       - ${OLD_CONFIG}:/old_config:ro
       - /etc/passwd:/etc/passwd:ro
+      - ./scripts/build_kernel.sh:/entrypoint.sh
     # this is the 1st user in Debian/Ubuntu
     user: "1000:1000"
+    entrypoint:
+      - /entrypoint.sh
