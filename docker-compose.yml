@@ -2,8 +2,11 @@
 version: '3'
 services:
   kernel_builder:
-    build: ./build
-    image: neofob/kernel_builder:latest
+    build:
+      context: ./build
+      args:
+        GCC_VERSION: ${GCC_VERSION}
+    image: neofob/kernel_builder:${GCC_VERSION}
     container_name: kernel_builder
     hostname: kernel_builder
     volumes:

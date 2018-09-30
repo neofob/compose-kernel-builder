@@ -1,4 +1,5 @@
-FROM gcc:latest
+ARG GCC_VERSION
+FROM gcc:$GCC_VERSION
 LABEL maintainer "tuan t. pham <tuan@vt.edu>"
 
 ENV	PKGS="libncurses5-dev make git exuberant-ctags bc libssl-dev bison flex \
