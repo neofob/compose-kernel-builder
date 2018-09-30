@@ -17,7 +17,7 @@ $ git checkout linux-4.18.y
 # cd back to this directory
 # edit default_settings.env to point correct places
 
-$ docker-compose build kernel_build
+$ docker-compose build
 $ docker-compose up
 ```
 
